@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI-Free Career Decision Assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>🧠 Career Decision Assistant</h1>
+  <p>No AI • Pure Logic • Student Friendly</p>
+</header>
+
+<main class="container">
+
+  <!-- QUIZ -->
+  <section class="card" id="quizSection">
+    <h2>🎯 Career Quiz</h2>
+
+    <label>What do you enjoy most?</label>
+    <select id="interest">
+      <option value="logic">Problem Solving</option>
+      <option value="creative">Creative Work</option>
+      <option value="data">Working with Data</option>
+      <option value="people">Helping People</option>
+    </select>
+
+    <label>Preferred work style?</label>
+    <select id="workStyle">
+      <option value="structured">Structured</option>
+      <option value="flexible">Flexible</option>
+    </select>
+
+    <label>Technical level?</label>
+    <select id="techLevel">
+      <option value="low">Beginner</option>
+      <option value="medium">Intermediate</option>
+      <option value="high">Advanced</option>
+    </select>
+
+    <button onclick="analyzeCareer()">Find Career</button>
+  </section>
+
+  <!-- RESULT -->
+  <section class="card hidden" id="resultSection">
+    <h2>🧭 Career Result</h2>
+    <h3 id="careerTitle"></h3>
+    <p id="careerReason"></p>
+
+    <h4>Required Skills</h4>
+    <ul id="skillList"></ul>
+
+    <button onclick="showRoadmap()">View Learning Roadmap</button>
+  </section>
+
+  <!-- ROADMAP -->
+  <section class="card hidden" id="roadmapSection">
+    <h2>🛣️ Learning Roadmap</h2>
+    <ul id="roadmapList"></ul>
+    <progress id="progressBar" value="0" max="100"></progress>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
